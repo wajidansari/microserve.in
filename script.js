@@ -1,19 +1,21 @@
-// Mobile Menu Toggle
-document.querySelector('.mobile-menu').addEventListener('click', function() {
-    const nav = document.querySelector('nav ul');
-    nav.classList.toggle('show');
-    
-    // Toggle icon
+// Mobile Menu Toggle - Fixed Version
+document.getElementById('mobileMenu').addEventListener('click', function() {
+    const nav = document.getElementById('navMenu');
     const icon = this.querySelector('i');
+    
+    nav.classList.toggle('show');
     icon.classList.toggle('fa-bars');
     icon.classList.toggle('fa-times');
 });
 
-// Smooth Scrolling
+// Smooth Scrolling - Fixed
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const target = document.querySelector(targetId);
         if (target) {
             window.scrollTo({
                 top: target.offsetTop - 70,
@@ -21,18 +23,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
             
             // Close mobile menu if open
-            document.querySelector('nav ul').classList.remove('show');
-            document.querySelector('.mobile-menu i').classList.remove('fa-times');
-            document.querySelector('.mobile-menu i').classList.add('fa-bars');
+            const nav = document.getElementById('navMenu');
+            if (nav.classList.contains('show')) {
+                nav.classList.remove('show');
+                document.querySelector('.mobile-menu i').classList.remove('fa-times');
+                document.querySelector('.mobile-menu i').classList.add('fa-bars');
+            }
         }
     });
 });
 
-// Form Handling
-document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', function(e) {
+// Form Handling - Fixed
+if (document.querySelector('form')) {
+    document.querySelector('form').addEventListener('submit', function(e) {
         e.preventDefault();
         alert('Thank you! We will contact you shortly.');
         this.reset();
     });
-});
+}
