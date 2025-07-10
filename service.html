@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Microserve.in | Professional Computer & Laptop Repairs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reuse the same CSS from your main page */
+        :root {
+            --primary-color: #2a5bd7;
+            --secondary-color: #ff7b25;
+            --dark-color: #333;
+            --light-color: #f4f4f4;
+            --gray-color: #777;
+            --white-color: #fff;
+            --black-color: #000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--white-color);
+        }
+
+        /* Add all the other CSS from your index.html here */
+        /* ... [paste all the CSS from your index.html] ... */
+        
+        /* Services Page Specific Styles */
+        .services-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white-color);
+            margin-top: 70px;
+        }
+
+        .services-main {
+            padding: 80px 0;
+        }
+
+        .service-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .service-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .service-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .service-content h2 {
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+        }
+
+        .service-content h3 {
+            margin: 25px 0 15px;
+            color: var(--primary-color);
+        }
+
+        .service-features {
+            margin: 20px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .feature-icon {
+            color: var(--primary-color);
+            margin-right: 15px;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .pricing-section {
+            background-color: var(--light-color);
+            padding: 80px 0;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .pricing-card {
+            background-color: var(--white-color);
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .pricing-card.popular {
+            border: 2px solid var(--primary-color);
+            position: relative;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .pricing-card h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: var(--gray-color);
+        }
+
+        .pricing-features {
+            margin-bottom: 30px;
+        }
+
+        .pricing-features li {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .brands-section {
+            padding: 80px 0;
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .brand-item {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .brand-item:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .brand-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .service-process {
+            background-color: var(--light-color);
+            padding: 80px 0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-step:not(:last-child):after {
+            content: '';
+            position: absolute;
+            top: 50px;
+            right: -30px;
+            width: 30px;
+            height: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232a5bd7' viewBox='0 0 24 24'%3E%3Cpath d='M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .step-number {
+            width: 100px;
+            height: 100px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 25px;
+        }
+
+        .step-content h3 {
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 992px) {
+            .service-detail {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-img {
+                order: -1;
+            }
+            
+            .process-step:not(:last-child):after {
+                display: none;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation (Same as index.html) -->
+    <header>
+        <div class="container">
+            <div class="logo">Micro<span>serve</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#book" class="btn btn-primary">Book Now</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Our Repair Services</h1>
+                <p>Expert solutions for all your computer and laptop problems</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Services Content -->
+    <section class="services-main">
+        <div class="container">
+            <!-- Laptop Screen Replacement Service -->
+            <div class="service-detail">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Laptop Screen Replacement">
+                </div>
+                <div class="service-content">
+                    <h2>Laptop Screen Replacement</h2>
+                    <p>We replace damaged or broken laptop screens with high-quality OEM or compatible parts. Our technicians can replace screens for all major brands including Dell, HP, Lenovo, Asus, Acer, and more.</p>
+                    
+                    <div class="service-features">
+                        <h3>Key Features</h3>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                            <p>Same-day service available for most models</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                            <p>High-quality screens with warranty</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                            <p>Professional installation by certified technicians</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                            <p>Free diagnostics and estimate</p>
+                        </div>
+                    </div>
+                    
+                    <a href="#book" class="btn btn-primary">Book Screen Replacement</a>
+                </div>
+            </div>
+            
+            <!-- Virus Removal Service -->
+            <div class="service-detail">
+                <div class="service-content">
+                    <h2>Virus & Malware Removal</h2>
+                    <p>Our comprehensive virus removal service will clean your system of all malware, spyware, adware, and other threats while protecting your valuable data.</p>
+                    
+                    <div class="service-features">
+                        <h3>What We Do</h3>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-shield-virus"></i></div>
+                            <p>Complete system scan and malware removal</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-shield-virus"></i></div>
+                            <p>Browser hijacker and adware removal</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-shield-virus"></i></div>
+                            <p>System optimization and performance tuning</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-shield-virus"></i></div>
+                            <p>Installation of premium antivirus software</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Prevention Tips</h3>
+                    <p>We'll provide you with expert advice on how to avoid future infections and keep your system secure.</p>
+                    
+                    <a href="#book" class="btn btn-primary">Schedule Virus Removal</a>
+                </div>
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Virus Removal">
+                </div>
+            </div>
+            
+            <!-- Data Recovery Service -->
+            <div class="service-detail">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9aabf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Data Recovery">
+                </div>
+                <div class="service-content">
+                    <h2>Data Recovery Services</h2>
+                    <p>Lost important files? Our data recovery experts can help retrieve your valuable data from damaged, corrupted, or inaccessible storage devices.</p>
+                    
+                    <div class="service-features">
+                        <h3>We Recover Data From</h3>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-hdd"></i></div>
+                            <p>Crashed hard drives (HDD/SSD)</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-usb"></i></div>
+                            <p>Corrupted USB drives and memory cards</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-laptop"></i></div>
+                            <p>Damaged laptops and computers</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-database"></i></div>
+                            <p>Formatted or accidentally deleted partitions</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Our Success Rate</h3>
+                    <p>We achieve a 90%+ success rate in data recovery cases, even when others have failed.</p>
+                    
+                    <a href="#book" class="btn btn-primary">Start Data Recovery</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Service Pricing</h2>
+            <p class="section-subtitle">Transparent pricing with no hidden fees</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic Service</h3>
+                    <div class="price">₹499 <span>/service</span></div>
+                    <ul class="pricing-features">
+                        <li>Virus Removal</li>
+                        <li>Software Installation</li>
+                        <li>System Optimization</li>
+                        <li>Diagnostics</li>
+                        <li>1 Month Warranty</li>
+                    </ul>
+                    <a href="#book" class="btn btn-secondary">Choose Plan</a>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Standard Service</h3>
+                    <div class="price">₹1,299 <span>/service</span></div>
+                    <ul class="pricing-features">
+                        <li>All Basic Services</li>
+                        <li>Hardware Diagnostics</li>
+                        <li>Component Replacement</li>
+                        <li>Data Backup</li>
+                        <li>3 Month Warranty</li>
+                    </ul>
+                    <a href="#book" class="btn btn-primary">Choose Plan</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Premium Service</h3>
+                    <div class="price">₹2,499 <span>/service</span></div>
+                    <ul class="pricing-features">
+                        <li>All Standard Services</li>
+                        <li>Priority Service</li>
+                        <li>Onsite Support</li>
+                        <li>Full System Tune-up</li>
+                        <li>6 Month Warranty</li>
+                    </ul>
+                    <a href="#book" class="btn btn-secondary">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Process -->
+    <section class="service-process">
+        <div class="container">
+            <h2 class="section-title">Our Service Process</h2>
+            <p class="section-subtitle">Simple and transparent steps to get your device repaired</p>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Diagnosis</h3>
+                        <p>We perform a thorough diagnostic to identify all issues with your device (free for most services).</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Approval</h3>
+                        <p>We provide a detailed estimate and only proceed with repairs after your approval.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Repair</h3>
+                        <p>Our certified technicians perform the necessary repairs using quality parts and tools.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Testing</h3>
+                        <p>We rigorously test your device to ensure all issues are resolved before returning it to you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands We Service -->
+    <section class="brands-section">
+        <div class="container">
+            <h2 class="section-title">Brands We Service</h2>
+            <p class="section-subtitle">We repair all major brands of laptops and computers</p>
+            
+            <div class="brands-grid">
+                <div class="brand-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/HP_logo_2012.svg/1200px-HP_logo_2012.svg.png" alt="HP">
+                </div>
+                <div class="brand-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Dell_Logo.png/800px-Dell_Logo.png" alt="Dell">
+                </div>
+                <div class="brand-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Lenovo_logo_2015.svg/1200px-Lenovo_logo_2015.svg.png" alt="Lenovo">
+                </div>
+                <div class="brand-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Apple_logo_black.svg/1200px-Apple_logo_black.svg.png" alt="Apple">
+                </div>
+                <div class="brand-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Asus_logo_17.jpg/1200px-Asus_logo_17.jpg" alt="Asus">
+                </div>
+                <div class="brand-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Acer_logo_%282017%29.svg/1200px-Acer_logo_%282017%29.svg.png" alt="Acer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="color: white; margin-bottom: 20px;">Micro<span style="color: var(--secondary-color);">serve</span></div>
+                    <p>Your trusted partner for computer and laptop repairs in India. Quality service with guaranteed satisfaction.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Laptop Screen Replacement</a></li>
+                        <li><a href="#">Virus Removal</a></li>
+                        <li><a href="#">Data Recovery</a></li>
+                        <li><a href="#">Hardware Repairs</a></li>
+                        <li><a href="#">Onsite Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Park, Bangalore, India</li>
+                        <li><i class="fas fa-phone"></i> +91 12345 67890</li>
+                        <li><i class="fas fa-envelope"></i> support@microserve.in</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Microserve.in. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <a href="#book" class="fab-btn">
+        <i class="fas fa-tools"></i>
+        <span>Book Now</span>
+    </a>
+
+    <script>
+        // Same JavaScript as index.html
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
