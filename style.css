@@ -1,3 +1,10 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --primary: #2a5bd7;
     --secondary: #ff7b25;
@@ -6,15 +13,8 @@
     --white: #fff;
 }
 
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
     color: var(--dark);
 }
@@ -23,12 +23,13 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
-/* Header Styles */
+/* Header */
 header {
     background: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
     top: 0;
@@ -40,7 +41,7 @@ header {
     height: 40px;
 }
 
-/* Mobile Menu */
+/* Mobile Menu Fix */
 .mobile-menu {
     display: none;
     font-size: 1.5rem;
@@ -49,15 +50,17 @@ header {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/hero-bg.jpg') center/cover;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('../images/hero-bg.jpg') center/cover no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
     color: var(--white);
+    text-align: center;
     margin-top: 70px;
 }
 
-/* Responsive Design */
+/* Responsive Fixes */
 @media (max-width: 768px) {
     nav ul {
         display: none;
