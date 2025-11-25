@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laptop Repair in Mira Road, Mumbai | Microserve</title>
-    <meta name="description" content="Microserve offers expert laptop, desktop, and MacBook repair services in Mumbai. Fast chip-level repair, data recovery, and on-site support available. Call +91-9987620148.">
-    <meta name="keywords" content="laptop repair Mumbai, MacBook repair Mumbai, desktop repair Mumbai, laptop service center Mumbai, Microserve laptop service, chip level repair Mumbai, computer repair Mumbai">
-
+    <title>Microserve - Laptop Repair & IT Services</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome for mobile menu icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="logo">Micro<span>serve</span></div>
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" alt="Microserve Logo"></a>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#book" class="btn btn-primary">Book Now</a></li>
                 </ul>
             </nav>
             <div class="mobile-menu">
@@ -33,143 +32,55 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container hero-content">
-            <h1>Laptop Repair in Mira Road, Mumbai | Expert Computer & Laptop Repairs</h1>
-            <p>Welcome to Microserve — your trusted center for Laptop Repair in Mira Road, Mumbai. We specialize in MacBook repair, desktop servicing, chip-level motherboard repair, and data recovery for all major brands including HP, Dell, Lenovo, Asus, Acer, and Apple.</p>
-            <p>Fast, reliable, and affordable repair services with 6-month warranty on all repairs</p>
-            <div class="hero-buttons">
-                <a href="#book" class="btn btn-primary">Book Repair Now</a>
-                <a href="tel:+919987620148" class="btn btn-secondary">
-                    <i class="fas fa-phone"></i> Call: +91 9987620148
-                </a>
-            </div>
+        <div class="hero-content">
+            <h1>Welcome to Microserve</h1>
+            <p>Laptop Repair & IT Services in Mira Road, Mumbai</p>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Comprehensive repair solutions for all your devices</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-laptop service-icon"></i>
-                    <h3>Laptop Screen Replacement</h3>
-                    <p>Quick replacement of broken or damaged laptop screens with high-quality parts and warranty.</p>
-                    <a href="#">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-shield-virus service-icon"></i>
-                    <h3>Virus Removal</h3>
-                    <p>Complete malware and virus removal to protect your data and restore system performance.</p>
-                    <a href="#">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-microchip service-icon"></i>
-                    <h3>Hardware Repair</h3>
-                    <p>Motherboard, RAM, HDD/SSD, and other hardware component repairs and replacements.</p>
-                    <a href="#">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-database service-icon"></i>
-                    <h3>Data Recovery</h3>
-                    <p>Professional data recovery services for accidentally deleted or corrupted files and drives.</p>
-                    <a href="#">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-download service-icon"></i>
-                    <h3>Software Installation</h3>
-                    <p>OS installation, driver updates, software configuration, and optimization services.</p>
-                    <a href="#">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-home service-icon"></i>
-                    <h3>Onsite Service</h3>
-                    <p>We come to you for repairs at your home or office (available in selected areas).</p>
-                    <a href="#">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
+            <h2>Our Services</h2>
+            <!-- Service items -->
         </div>
     </section>
 
-    <!-- Booking Section -->
-    <section id="book" class="booking">
-        <div class="container booking-container">
-            <div class="booking-form">
-                <h2>Book Your Repair</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="device-type">Device Type</label>
-                        <select id="device-type" required>
-                            <option value="">Select your device</option>
-                            <option value="laptop">Laptop</option>
-                            <option value="desktop">Desktop</option>
-                            <option value="macbook">MacBook</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="issue">What's the issue?</label>
-                        <select id="issue" required>
-                            <option value="">Select your issue</option>
-                            <option value="screen">Screen broken</option>
-                            <option value="virus">Virus/Malware</option>
-                            <option value="hardware">Hardware failure</option>
-                            <option value="software">Software issue</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" required placeholder="Enter your name">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" required placeholder="Enter your phone number">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Schedule Repair</button>
-                </form>
-            </div>
-            <div class="booking-info">
-                <h3>Need Immediate Assistance?</h3>
-                <a href="tel:+919987620148" class="phone-number">
-                    <i class="fas fa-phone"></i> +91 9987620148
-                </a>
-                <p>Working Hours: Mon-Sat 9:00 AM - 8:00 PM, Sun 10:00 AM - 4:00 PM</p>
-            </div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Serving Mira Road since 2004, Microserve is a trusted Laptop Repair & IT Service Center.</p>
         </div>
     </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Reach out for inquiries or support.</p>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <div class="map-responsive">
+        <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
 
     <!-- Footer -->
-    <footer id="contact">
-        <div class="container footer-container">
-            <div class="footer-col">
-                <div class="logo">Micro<span>serve</span></div>
-                <p>Your trusted partner for computer and laptop repairs in India. Quality service with guaranteed satisfaction.</p>
-            </div>
-            <div class="footer-col">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Shop no 4, Jupiter apartment, Mira Bhayandar Rd, Near MC Donald's, Mira Road East, Mumbai, 401107</p>
-                <p><i class="fas fa-phone"></i> +91 9987620148</p>
-                <p><i class="fas fa-envelope"></i> support@microserve.in</p>
-            </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Microserve. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <!-- Mobile Menu Script -->
     <script>
-        // Mobile menu toggle
         const mobileMenu = document.querySelector('.mobile-menu');
         const navUL = document.querySelector('nav ul');
+
         mobileMenu.addEventListener('click', () => {
             navUL.classList.toggle('show');
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
         });
     </script>
 </body>
