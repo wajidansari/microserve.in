@@ -3,75 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microserve - Laptop Repair & IT Services</title>
+    <title>Microserve – Laptop Repair & IT Service Center</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
-                <a href="#"><img src="images/logo.png" alt="Microserve Logo"></a>
+                <a href="index.html"><img src="images/logo.png" alt="Microserve Logo"></a>
             </div>
             <nav>
-                <div class="mobile-menu">&#9776;</div>
-                <ul>
+                <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <div class="mobile-menu"><i class="fas fa-bars"></i></div>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="container hero-content">
-            <h1>Microserve - Laptop Repair & IT Service Center</h1>
-            <p>Serving Mira Road since 2004. Trusted services with genuine parts and same-day solutions.</p>
+        <div class="hero-content">
+            <h1>Trusted Laptop Repair & IT Service Center in Mira Road</h1>
+            <p>Serving Mira Road since 2004. Professional repair, sales, AMC, and IT solutions.</p>
+            <a href="#contact" class="btn-primary">Contact Us</a>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services">
+    <section class="services" id="services">
         <div class="container">
             <h2>Our Services</h2>
-            <ul class="services-list">
-                <li>SSD Upgrades & Hard Disk Replacement</li>
-                <li>Laptop Screen Replacement</li>
-                <li>Motherboard Repair</li>
-                <li>Data Recovery & Virus Removal</li>
-                <li>Custom PC Builds & IT Support</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Microserve</h2>
-            <p>Microserve has been providing professional laptop and IT repair services in Mira Road, Mumbai, with over 20 years of experience. We handle repairs, maintenance, and IT solutions for brands like HP, Dell, Lenovo, Asus, Acer, and more.</p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Reach us via phone, email, or visit our center for all laptop repair and IT services.</p>
-            <div class="map-responsive">
-                <iframe src="https://www.google.com/maps/embed?pb=..." frameborder="0" allowfullscreen></iframe>
+            <div class="service-cards">
+                <div class="card">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Laptop Repair</h3>
+                    <p>Screen replacement, keyboard, motherboard repair, SSD upgrades, and more.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-desktop"></i>
+                    <h3>Desktop Repair</h3>
+                    <p>Hardware & software solutions, virus removal, and data recovery.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-server"></i>
+                    <h3>IT Services</h3>
+                    <p>On-site support, AMC contracts, ERP, networking, and IT consultation.</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About Microserve</h2>
+            <p>Microserve has over 20 years of experience providing trusted laptop and desktop repair services. We use genuine parts and offer same-day service with professional, polite support. Our expertise covers HP, Dell, Lenovo, Asus, Acer, and more.</p>
+        </div>
+    </section>
+
+    <!-- Google Map Section -->
+    <section class="map" id="contact">
+        <div class="container">
+            <h2>Find Us</h2>
+            <div class="map-responsive">
+                <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAP_EMBED_CODE_HERE" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2025 Microserve. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
     <script>
-        // Mobile menu toggle
         const mobileMenu = document.querySelector('.mobile-menu');
-        const navUL = document.querySelector('nav ul');
+        const navLinks = document.querySelector('.nav-links');
+
         mobileMenu.addEventListener('click', () => {
-            navUL.classList.toggle('show');
+            navLinks.classList.toggle('show');
         });
     </script>
 </body>
