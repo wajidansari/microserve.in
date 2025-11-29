@@ -31,7 +31,9 @@ a {
     padding: 0 15px;
 }
 
-/* Header */
+/* ------------------------------
+   HEADER
+--------------------------------*/
 header {
     background: var(--white);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -42,7 +44,10 @@ header {
     padding: 15px 0;
 }
 
-.header-container {
+/* FIX: Github Pages menu shifting issue */
+header .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,6 +55,11 @@ header {
 
 .logo img {
     height: 50px;
+}
+
+/* Optional: Reduce pressure caused by big logo */
+.logo {
+    font-size: 1.6rem;
 }
 
 nav ul {
@@ -74,10 +84,13 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-/* Hero */
+/* ------------------------------
+   HERO SECTION
+--------------------------------*/
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-bg.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+        url('images/hero-bg.jpg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,7 +122,9 @@ nav ul li a:hover {
     background: var(--secondary);
 }
 
-/* Services */
+/* ------------------------------
+   SERVICES
+--------------------------------*/
 .services {
     padding: 80px 0;
     background: var(--light);
@@ -151,7 +166,9 @@ nav ul li a:hover {
     margin-bottom: 15px;
 }
 
-/* About */
+/* ------------------------------
+   ABOUT
+--------------------------------*/
 .about {
     padding: 80px 0;
     text-align: center;
@@ -162,7 +179,9 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-/* Map */
+/* ------------------------------
+   MAP
+--------------------------------*/
 .map {
     padding: 80px 0;
     text-align: center;
@@ -188,7 +207,9 @@ nav ul li a:hover {
     border: 0;
 }
 
-/* Footer */
+/* ------------------------------
+   FOOTER
+--------------------------------*/
 footer {
     background: var(--dark);
     color: #fff;
@@ -206,7 +227,9 @@ footer .social-links a:hover {
     color: var(--primary);
 }
 
-/* Responsive */
+/* ------------------------------
+   RESPONSIVE
+--------------------------------*/
 @media(max-width: 768px) {
     nav ul {
         display: none;
@@ -216,28 +239,4 @@ footer .social-links a:hover {
         left: 0;
         right: 0;
         background: var(--white);
-        padding: 20px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    .mobile-menu {
-        display: block;
-    }
-
-    .service-cards {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-}
+        pa
