@@ -13,7 +13,6 @@
     content="laptop repair Mumbai, MacBook repair Mumbai, desktop repair Mumbai, laptop service center Mumbai, Microserve laptop service, chip level repair Mumbai, computer repair Mumbai">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
 
   <!-- Local Business Schema -->
   <script type="application/ld+json">
@@ -56,6 +55,213 @@
   }
   </script>
 
+  <!-- CSS START -->
+  <style>
+    :root {
+      --primary-color: #2a5bd7;
+      --secondary-color: #ff7b25;
+      --dark-color: #333;
+      --light-color: #f4f4f4;
+      --gray-color: #777;
+      --white-color: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: var(--white-color);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .btn-primary {
+      background: var(--primary-color);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: transparent;
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
+    }
+
+    .btn-secondary {
+      background: var(--secondary-color);
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: transparent;
+      border: 2px solid var(--secondary-color);
+      color: var(--secondary-color);
+    }
+
+    /* HEADER */
+    header {
+      background: var(--white-color);
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px #00000020;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .logo span {
+      color: var(--secondary-color);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 25px;
+    }
+
+    nav ul li a {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--dark-color);
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: var(--primary-color);
+    }
+
+    .mobile-menu {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      height: 90vh;
+      margin-top: 70px;
+      background: linear-gradient(#0009, #0009),
+        url('https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=1350&q=80')
+        center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+
+    .hero-content {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /* SERVICES */
+    .services {
+      padding: 80px 0;
+      background: var(--light-color);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .service-card {
+      background: #fff;
+      padding: 40px 30px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px #00000010;
+      transition: .3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px #00000015;
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--gray-color);
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+  </style>
+  <!-- CSS END -->
+
 </head>
 
 <body>
@@ -65,7 +271,7 @@
     <div class="container">
       <div class="logo">Micro<span>serve</span></div>
       <nav>
-        <ul id="mobile-menu">
+        <ul>
           <li><a href="#" class="active">Home</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#pricing">Pricing</a></li>
@@ -74,7 +280,7 @@
           <li><a href="#book" class="btn btn-primary">Book Now</a></li>
         </ul>
       </nav>
-      <div id="menu-icon" class="mobile-menu"><i class="fas fa-bars"></i></div>
+      <div class="mobile-menu"><i class="fas fa-bars"></i></div>
     </div>
   </header>
 
@@ -147,16 +353,6 @@
       </div>
     </div>
   </section>
-
-  <!-- JS FOR MOBILE MENU -->
-  <script>
-    const menuIcon = document.getElementById("menu-icon");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    menuIcon.addEventListener("click", () => {
-      mobileMenu.classList.toggle("active");
-    });
-  </script>
 
 </body>
 </html>
