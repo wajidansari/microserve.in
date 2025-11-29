@@ -16,9 +16,6 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 /* HEADER */
@@ -29,6 +26,9 @@ header {
   position: sticky;
   top: 0;
   z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -42,7 +42,7 @@ header {
   display: none;
 }
 
-/* NAV MENU (DESKTOP) */
+/* NAV MENU */
 nav ul {
   display: flex;
   gap: 25px;
@@ -59,40 +59,32 @@ nav ul li a {
   font-size: 16px;
 }
 
-/* MOBILE MENU DEFAULT HIDDEN */
+/* MOBILE MENU */
 #mobile-menu {
-  display: none;
-  background: #fff;
-  width: 100%;
-  padding: 20px 0;
-  border-top: 1px solid #ddd;
-}
-
-#mobile-menu ul {
+  display: none; /* hidden by default */
   flex-direction: column;
-  gap: 15px;
-  text-align: center;
+  gap: 20px;
+  background: #fff;
+  padding: 15px 0;
+  position: absolute;
+  top: 70px; /* below header */
+  width: 100%;
+  left: 0;
+  box-shadow: 0 4px 10px #00000020;
+  z-index: 999;
 }
 
-/* ACTIVE state for mobile menu */
 #mobile-menu.active {
-  display: block;
+  display: flex;
 }
 
-/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
   }
 
   nav ul {
-    display: none; /* hide desktop nav */
-  }
-
-  header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: none;
   }
 }
 
@@ -135,13 +127,13 @@ nav ul li a {
   font-size: 30px;
 }
 
-.grid {
+.services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.card {
+.service-card {
   background: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -151,14 +143,14 @@ nav ul li a {
 }
 
 @media (max-width: 768px) {
-  .grid {
+  .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr;
+  .services-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
