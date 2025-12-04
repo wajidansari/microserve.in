@@ -3,57 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Laptop Repair in Mira Road, Mumbai | Microserve – Expert MacBook & Desktop Service</title>
+    <title>Laptop Repair in Mira Road, Mumbai | Microserve – Expert MacBook & Desktop Service</title>
     <meta name="description" content="Microserve offers expert laptop, desktop, and MacBook repair services in Mumbai. Fast chip-level repair, data recovery, and on-site support available. Call +91-9987620148.">
     <meta name="keywords" content="laptop repair Mumbai, MacBook repair Mumbai, desktop repair Mumbai, laptop service center Mumbai, Microserve laptop service, chip level repair Mumbai, computer repair Mumbai">
-
     
-   <!-- <meta name="description" content="Microserve offers fast, affordable laptop and IT repair services in Mira Road. Visit our shop or call now."> -->
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://microserve.in/">
+    <meta property="og:title" content="Laptop Repair in Mira Road, Mumbai | Microserve">
+    <meta property="og:description" content="Expert laptop, desktop & MacBook repair services in Mumbai. Fast chip-level repair, data recovery, and on-site support.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://microserve.in/">
+    <meta property="twitter:title" content="Laptop Repair in Mira Road, Mumbai | Microserve">
+    <meta property="twitter:description" content="Expert laptop, desktop & MacBook repair services in Mumbai.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   
+    
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Microserve",
-  "image": "https://microserve.in/assets/images/logo.png",
-  "url": "https://microserve.in/",
-  "telephone": "+91-9987620148",
-  "email": "support@microserve.in",
-  "priceRange": "₹₹",
-  "description": "Microserve provides professional Laptop, Desktop, and MacBook repair services across Mumbai and Patna. Expert chip-level repair, data recovery, and same-day service available.",
-  "foundingDate": "2004-01-10",
-  "founders": [
     {
-      "@type": "Person",
-      "name": "Wajid Ansari"
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Microserve",
+      "url": "https://microserve.in/",
+      "telephone": "+91-9987620148",
+      "email": "support@microserve.in",
+      "priceRange": "₹₹",
+      "description": "Microserve provides professional Laptop, Desktop, and MacBook repair services across Mumbai and Patna. Expert chip-level repair, data recovery, and same-day service available.",
+      "foundingDate": "2004-01-10",
+      "founders": [
+        {
+          "@type": "Person",
+          "name": "Wajid Ansari"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop No- 4, Jupiter Appartment, Near Mcdonald's, Mira-Bhayandar Highway",
+        "addressLocality": "Mira Road",
+        "addressRegion": "Maharashtra",
+        "postalCode": "401107",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.2813,
+        "longitude": 72.8680
+      },
+      "openingHours": "Mo-Su 10:00-20:00",
+      "sameAs": [
+        "https://www.facebook.com/microserve.india",
+        "https://www.instagram.com/microserve.india",
+        "https://www.linkedin.com/company/microserve.india"
+      ]
     }
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Shop No- 4, Jupiter Appartment, Near Mcdonald's, Mira-Bhayandar Highway",
-    "addressLocality": "Mira Road",
-    "addressRegion": "Maharashtra",
-    "postalCode": "401107",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 19.2813,
-    "longitude": 72.8680
-  },
-  "openingHours": "Mo-Su 10:00-20:00",
-  "sameAs": [
-    "https://www.facebook.com/microserve.india",
-    "https://www.instagram.com/microserve.india",
-    "https://www.linkedin.com/company/microserve.india"
-  ]
-}
-</script>
-
-    
-    
-    
+    </script>
     
     <style>
         /* Global Styles */
@@ -196,11 +207,36 @@
             display: none;
             font-size: 24px;
             cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Mobile Menu Active State */
+        nav ul.show {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            background-color: var(--white-color);
+            padding: 20px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            z-index: 1001;
+        }
+
+        nav ul.show li {
+            margin: 10px 0;
+        }
+
+        nav ul.show li a.btn {
+            display: inline-block;
+            width: auto;
+            margin-top: 10px;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
             height: 90vh;
             display: flex;
             align-items: center;
@@ -351,7 +387,9 @@
             font-size: 1.1rem;
         }
 
-        .form-group input, .form-group select {
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
             width: 100%;
             padding: 14px 20px;
             border: 1px solid #ddd;
@@ -360,7 +398,14 @@
             font-size: 1rem;
         }
 
-        .form-group input:focus, .form-group select:focus {
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
             outline: none;
             border-color: var(--primary-color);
         }
@@ -460,6 +505,31 @@
 
         .customer h4 {
             font-size: 1.2rem;
+        }
+
+        /* Map Section */
+        .map-section {
+            padding: 60px 0;
+            background-color: var(--light-color);
+        }
+
+        .map-responsive {
+            overflow: hidden;
+            padding-bottom: 30%;
+            position: relative;
+            height: 0;
+            margin: 40px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .map-responsive iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border: 0;
         }
 
         /* Footer */
@@ -621,6 +691,10 @@
             .phone-number {
                 justify-content: center;
             }
+            
+            .map-responsive {
+                padding-bottom: 40%;
+            }
         }
 
         @media (max-width: 768px) {
@@ -646,6 +720,10 @@
             
             .section-title {
                 font-size: 2rem;
+            }
+            
+            .map-responsive {
+                padding-bottom: 50%;
             }
         }
 
@@ -690,10 +768,32 @@
             
             .contact-info li {
                 justify-content: center;
+                text-align: center;
+                flex-direction: column;
+            }
+            
+            .contact-info i {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .map-responsive {
+                padding-bottom: 60%;
+            }
+            
+            .fab-btn {
+                width: 60px;
+                height: 60px;
+                font-size: 12px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .fab-btn i {
+                font-size: 20px;
             }
         }
     </style>
-    
 </head>
 <body>
     <!-- Header/Navigation -->
@@ -721,12 +821,12 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Laptop Repair in Mira Road, Mumbai| Expert Computer & Laptop Repairs</h1>
-                   <p> Welcome to Microserve — your trusted center for Laptop Repair in Mira Road, Mumbai.
-We specialize in MacBook repair, desktop servicing, chip-level motherboard repair, and data recovery for all major brands including HP, Dell, Lenovo, Asus, Acer and Apple.</p>
+                <p>Welcome to Microserve — your trusted center for Laptop Repair in Mira Road, Mumbai.
+                We specialize in MacBook repair, desktop servicing, chip-level motherboard repair, and data recovery for all major brands including HP, Dell, Lenovo, Asus, Acer and Apple.</p>
                 <p>Fast, reliable, and affordable repair services with 6-month warranty on all repairs</p>
                 <div class="hero-buttons">
                     <a href="#book" class="btn btn-primary">Book Repair Now</a>
-                    <a href="tel:+911234567890" class="btn btn-secondary">
+                    <a href="tel:+919987620148" class="btn btn-secondary">
                         <i class="fas fa-phone"></i> Call: +91 9987620148
                     </a>
                 </div>
@@ -837,39 +937,53 @@ We specialize in MacBook repair, desktop servicing, chip-level motherboard repai
         <div class="container">
             <div class="booking-form">
                 <h2>Book Your Repair</h2>
-                <form>
+                <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST">
+                    <input type="hidden" name="_subject" value="New Repair Request - Microserve">
+                    
                     <div class="form-group">
                         <label for="device-type">Device Type</label>
-                        <select id="device-type" required>
+                        <select id="device-type" name="device-type" required>
                             <option value="">Select your device</option>
-                            <option value="laptop">Laptop</option>
-                            <option value="desktop">Desktop</option>
-                            <option value="macbook">MacBook</option>
-                            <option value="other">Other</option>
+                            <option value="Laptop">Laptop</option>
+                            <option value="Desktop">Desktop</option>
+                            <option value="MacBook">MacBook</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
                         <label for="issue">What's the issue?</label>
-                        <select id="issue" required>
+                        <select id="issue" name="issue" required>
                             <option value="">Select your issue</option>
-                            <option value="screen">Screen broken</option>
-                            <option value="virus">Virus/Malware</option>
-                            <option value="hardware">Hardware failure</option>
-                            <option value="software">Software issue</option>
-                            <option value="other">Other</option>
+                            <option value="Screen broken">Screen broken</option>
+                            <option value="Virus/Malware">Virus/Malware</option>
+                            <option value="Hardware failure">Hardware failure</option>
+                            <option value="Software issue">Software issue</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
                         <label for="name">Your Name</label>
-                        <input type="text" id="name" required placeholder="Enter your name">
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
                     </div>
                     
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" required placeholder="Enter your phone number">
+                        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
                     </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email (Optional)</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email for updates">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Details (Optional)</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Any other details about the issue..."></textarea>
+                    </div>
+                    
+                    <input type="text" name="_gotcha" style="display:none">
                     
                     <button type="submit" class="btn btn-primary" style="width: 100%;">Schedule Repair</button>
                 </form>
@@ -878,7 +992,7 @@ We specialize in MacBook repair, desktop servicing, chip-level motherboard repai
             <div class="booking-info">
                 <h3>Need Immediate Assistance?</h3>
                 <p>Call us now for emergency repairs or technical consultation:</p>
-                <a href="tel:+911234567890" class="phone-number">
+                <a href="tel:+919987620148" class="phone-number">
                     <i class="fas fa-phone"></i> +91 9987620148
                 </a>
                 <div class="working-hours">
@@ -907,7 +1021,7 @@ We specialize in MacBook repair, desktop servicing, chip-level motherboard repai
                     </div>
                     <p>"Microserve fixed my laptop screen in just 2 hours at a very reasonable price. The technician was professional and explained everything clearly. Highly recommended!"</p>
                     <div class="customer">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Sharma">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Sharma" loading="lazy">
                         <h4>Rahul Sharma</h4>
                     </div>
                 </div>
@@ -922,7 +1036,7 @@ We specialize in MacBook repair, desktop servicing, chip-level motherboard repai
                     </div>
                     <p>"Great service! They recovered all my important files from a crashed hard drive when other shops said it was impossible. Very knowledgeable staff."</p>
                     <div class="customer">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Patel">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Patel" loading="lazy">
                         <h4>Priya Patel</h4>
                     </div>
                 </div>
@@ -937,17 +1051,31 @@ We specialize in MacBook repair, desktop servicing, chip-level motherboard repai
                     </div>
                     <p>"The technician came to my office and fixed my desktop onsite. Very professional and completed the work faster than promised. Will use again."</p>
                     <div class="customer">
-                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Amit Joshi">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Amit Joshi" loading="lazy">
                         <h4>Amit Joshi</h4>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-<h3>Find Us on Google Maps</h3>
-<div class="map-responsive">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1073.0466546162029!2d72.86756588563921!3d19.287248558032484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b19de035ec45%3A0xc259559a5427a262!2sMicroserve%20%E2%80%93%20Laptop%20Repair%20%26%20IT%20Service%20Center%20in%20Mira%20Road%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1762930106784!5m2!1sen!2sin" width="1600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Our Location</h2>
+            <p class="section-subtitle">Visit our repair center in Mira Road</p>
+            
+            <div class="map-responsive">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1073.0466546162029!2d72.86756588563921!3d19.287248558032484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b19de035ec45%3A0xc259559a5427a262!2sMicroserve%20%E2%80%93%20Laptop%20Repair%20%26%20IT%20Service%20Center%20in%20Mira%20Road%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1762930106784!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://goo.gl/maps/your-map-link-here" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-directions"></i> Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer id="contact">
@@ -957,10 +1085,10 @@ We specialize in MacBook repair, desktop servicing, chip-level motherboard repai
                     <div class="logo" style="color: white; margin-bottom: 20px;">Micro<span style="color: var(--secondary-color);">serve</span></div>
                     <p>Your trusted partner for computer and laptop repairs in India. Quality service with guaranteed satisfaction.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/microserve.india" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/microserve.india" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/microserve.india" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 
@@ -969,7 +1097,7 @@ We specialize in MacBook repair, desktop servicing, chip-level motherboard repai
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#book">Book Repair</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -997,7 +1125,7 @@ We specialize in MacBook repair, desktop servicing, chip-level motherboard repai
             </div>
             
             <div class="copyright">
-                <p>&copy; 2025 Microserve.in. All Rights Reserved.</p>
+                <p>&copy; <span id="current-year">2025</span> Microserve.in. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -1009,20 +1137,74 @@ We specialize in MacBook repair, desktop servicing, chip-level motherboard repai
     </a>
 
     <script>
-        // Simple JavaScript for mobile menu toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('show');
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navMenu = document.querySelector('nav ul');
+        
+        mobileMenu.addEventListener('click', function() {
+            navMenu.classList.toggle('show');
+            // Toggle menu icon
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+                mobileMenu.querySelector('i').classList.replace('fa-times', 'fa-bars');
+            });
         });
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                // Don't smooth scroll for booking button
+                if(this.classList.contains('btn')) return true;
+                
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
+
+        // Form submission feedback (when using Formspree)
+        const form = document.querySelector('form');
+        if(form) {
+            form.addEventListener('submit', function() {
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitBtn.disabled = true;
+                
+                // Reset button after 5 seconds (in case of error)
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, 5000);
+            });
+        }
+
+        // Set current year in copyright
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Formspree form handling
+        if(window.location.search.includes('success=true')) {
+            alert('Thank you! Your repair request has been submitted. We will contact you shortly.');
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
     </script>
 </body>
 </html>
