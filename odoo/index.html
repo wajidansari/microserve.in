@@ -1,0 +1,1120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Odoo ERP Solutions & Implementation | Microserve – Odoo Learning Partner</title>
+
+  <meta name="description"
+        content="Microserve is an Odoo Learning Partner providing Odoo ERP implementation, CRM, Sales, Accounting, Inventory, POS, eCommerce, customization, training and support for businesses in Mumbai and India." />
+
+  <meta property="og:title"
+        content="Odoo ERP Solutions & Implementation | Microserve" />
+
+  <meta property="og:description"
+        content="Odoo ERP implementation, consulting, customization, training and support by Microserve, an Odoo Learning Partner." />
+
+  <meta property="og:url"
+        content="https://microserve.in/odoo/" />
+
+  <link rel="canonical"
+        href="https://microserve.in/odoo/" />
+
+  <link rel="stylesheet"
+        href="/assets/styles.css" />
+
+  <style>
+
+    /* ODOO PAGE */
+
+    .odoo-hero {
+      padding: 55px 0;
+    }
+
+    .odoo-badge {
+      display: inline-block;
+      background: #eee6ec;
+      color: #714b67;
+      padding: 8px 15px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .odoo-hero h2 {
+      font-size: 42px;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .odoo-hero h2 span {
+      color: #714b67;
+    }
+
+    .odoo-lead {
+      font-size: 18px;
+      color: #666;
+      max-width: 720px;
+    }
+
+    .odoo-buttons {
+      margin-top: 22px;
+    }
+
+    .odoo-buttons .btn {
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+
+    .odoo-highlight {
+      background: #714b67;
+      color: #fff;
+      border-radius: 12px;
+      padding: 30px;
+    }
+
+    .odoo-highlight h3 {
+      margin-bottom: 12px;
+      font-size: 25px;
+    }
+
+    .odoo-highlight p {
+      opacity: .9;
+    }
+
+    .odoo-app-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .odoo-app {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      padding: 22px;
+    }
+
+    .odoo-app h3 {
+      margin-bottom: 7px;
+    }
+
+    .odoo-app p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .odoo-icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .odoo-services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .odoo-service {
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      padding: 24px;
+      background: #fff;
+    }
+
+    .odoo-service h3 {
+      margin-bottom: 7px;
+    }
+
+    .odoo-service p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .odoo-process {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .odoo-step {
+      background: #fff;
+      border-radius: 10px;
+      padding: 22px;
+      border: 1px solid #e5e5e5;
+    }
+
+    .odoo-step-number {
+      display: inline-flex;
+      width: 38px;
+      height: 38px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #714b67;
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .odoo-step h3 {
+      margin-bottom: 6px;
+    }
+
+    .odoo-step p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .odoo-industries {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .odoo-industry {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 18px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .odoo-cta {
+      background: #714b67;
+      color: #fff;
+      padding: 50px 30px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .odoo-cta h2 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .odoo-cta p {
+      opacity: .9;
+      margin-bottom: 20px;
+    }
+
+    .odoo-cta .btn {
+      margin: 5px;
+    }
+
+    .odoo-faq {
+      margin-top: 25px;
+    }
+
+    .odoo-faq details {
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 17px 20px;
+      margin-bottom: 10px;
+      background: #fff;
+    }
+
+    .odoo-faq summary {
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .odoo-faq p {
+      color: #666;
+      margin-top: 12px;
+    }
+
+    @media(max-width:900px) {
+
+      .odoo-app-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .odoo-process {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .odoo-industries {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media(max-width:600px) {
+
+      .odoo-hero h2 {
+        font-size: 32px;
+      }
+
+      .odoo-app-grid,
+      .odoo-services,
+      .odoo-process,
+      .odoo-industries {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header class="header">
+
+  <div class="container wrap">
+
+    <div class="brand">
+
+      <img
+        src="/assets/logo.png"
+        alt="Microserve logo" />
+
+      <div>
+
+        <h1>Microserve</h1>
+
+        <div class="small">
+          Odoo ERP Solutions — Mumbai, India
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="cta">
+
+      <a
+        class="btn"
+        href="tel:+919987620148">
+        Call: +91-9987620148
+      </a>
+
+      <a
+        class="btn alt"
+        href="https://microserve.in/">
+        Home
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<main class="container">
+
+
+<!-- HERO -->
+
+<section class="odoo-hero">
+
+  <div class="grid"
+       style="grid-template-columns:1.4fr .8fr;gap:25px;">
+
+    <div>
+
+      <div class="odoo-badge">
+        🎓 Odoo Learning Partner
+      </div>
+
+      <h2>
+        Simplify Your Business
+        <span>with Odoo ERP</span>
+      </h2>
+
+      <p class="odoo-lead">
+
+        Manage your entire business from one integrated platform.
+        Microserve helps businesses implement Odoo for CRM, Sales,
+        Accounting, Inventory, Purchase, POS, Website and eCommerce.
+
+      </p>
+
+
+      <div class="odoo-buttons">
+
+        <a
+          class="btn"
+          href="#contact">
+          Get Free Consultation
+        </a>
+
+        <a
+          class="btn alt"
+          href="https://wa.me/919987620148">
+          WhatsApp Us
+        </a>
+
+      </div>
+
+
+      <div class="small"
+           style="margin-top:15px;">
+
+        ✓ Business-focused implementation
+        · ✓ Training & Support
+        · ✓ Cloud & Technical Expertise
+
+      </div>
+
+    </div>
+
+
+    <div class="odoo-highlight">
+
+      <h3>
+        One Platform.<br>
+        Entire Business.
+      </h3>
+
+      <p>
+        Connect your sales, customers, inventory,
+        accounting and operations in one system.
+      </p>
+
+      <div
+        style="margin-top:20px;font-size:15px;line-height:2;">
+
+        ✓ CRM<br>
+        ✓ Sales<br>
+        ✓ Accounting<br>
+        ✓ Inventory<br>
+        ✓ Purchase<br>
+        ✓ POS<br>
+        ✓ Website & eCommerce
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WHY ODOO -->
+
+<section>
+
+  <div class="card">
+
+    <h2>
+      Why choose Odoo?
+    </h2>
+
+    <p class="small"
+       style="max-width:800px;margin-top:10px;">
+
+      Odoo connects multiple business functions into one
+      integrated platform. Instead of managing separate
+      applications for sales, inventory, customers and
+      accounting, your teams can work from a single system.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ODOO APPS -->
+
+<section>
+
+  <h2>
+    Odoo Business Applications
+  </h2>
+
+  <p class="small">
+    Build the system your business needs and expand as you grow.
+  </p>
+
+
+  <div class="odoo-app-grid">
+
+    <div class="odoo-app">
+
+      <div class="odoo-icon">👥</div>
+
+      <h3>CRM</h3>
+
+      <p>
+        Manage leads, opportunities, customers and your sales pipeline.
+      </p>
+
+    </div>
+
+
+    <div class="odoo-app">
+
+      <div class="odoo-icon">💰</div>
+
+      <h3>Sales</h3>
+
+      <p>
+        Manage quotations, sales orders and customer invoicing.
+      </p>
+
+    </div>
+
+
+    <div class="odoo-app">
+
+      <div class="odoo-icon">📦</div>
+
+      <h3>Inventory</h3>
+
+      <p>
+        Track products, stock, warehouses and inventory movements.
+      </p>
+
+    </div>
+
+
+    <div class="odoo-app">
+
+      <div class="odoo-icon">🧾</div>
+
+      <h3>Accounting</h3>
+
+      <p>
+        Manage invoices, payments, expenses and financial workflows.
+      </p>
+
+    </div>
+
+
+    <div class="odoo-app">
+
+      <div class="odoo-icon">🛒</div>
+
+      <h3>Point of Sale</h3>
+
+      <p>
+        Manage retail stores, billing, customers and stock.
+      </p>
+
+    </div>
+
+
+    <div class="odoo-app">
+
+      <div class="odoo-icon">🚚</div>
+
+      <h3>Purchase</h3>
+
+      <p>
+        Manage vendors, purchase orders and procurement.
+      </p>
+
+    </div>
+
+
+    <div class="odoo-app">
+
+      <div class="odoo-icon">🌐</div>
+
+      <h3>Website</h3>
+
+      <p>
+        Build your business website with integrated business data.
+      </p>
+
+    </div>
+
+
+    <div class="odoo-app">
+
+      <div class="odoo-icon">🛍️</div>
+
+      <h3>eCommerce</h3>
+
+      <p>
+        Sell online with products, orders, payments and inventory.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section>
+
+  <h2>
+    Odoo Services by Microserve
+  </h2>
+
+  <p class="small">
+    From business analysis to implementation and ongoing support.
+  </p>
+
+
+  <div class="odoo-services">
+
+    <div class="odoo-service">
+
+      <h3>
+        Odoo Implementation
+      </h3>
+
+      <p>
+        Configure Odoo around your business processes,
+        users and operational requirements.
+      </p>
+
+    </div>
+
+
+    <div class="odoo-service">
+
+      <h3>
+        Odoo Consulting
+      </h3>
+
+      <p>
+        Identify the right Odoo applications and workflows
+        for your business.
+      </p>
+
+    </div>
+
+
+    <div class="odoo-service">
+
+      <h3>
+        Customization & Integration
+      </h3>
+
+      <p>
+        Integrate Odoo with websites, marketplaces,
+        payment systems and other business applications.
+      </p>
+
+    </div>
+
+
+    <div class="odoo-service">
+
+      <h3>
+        Data Migration
+      </h3>
+
+      <p>
+        Migrate products, customers, vendors and
+        business information into Odoo.
+      </p>
+
+    </div>
+
+
+    <div class="odoo-service">
+
+      <h3>
+        Odoo Training
+      </h3>
+
+      <p>
+        Train your employees and help your team
+        adopt Odoo effectively.
+      </p>
+
+    </div>
+
+
+    <div class="odoo-service">
+
+      <h3>
+        Technical Support
+      </h3>
+
+      <p>
+        Deployment, maintenance, integrations and
+        ongoing Odoo technical assistance.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section>
+
+  <h2>
+    Our Odoo Implementation Process
+  </h2>
+
+  <p class="small">
+    A structured approach to help your business move to Odoo.
+  </p>
+
+
+  <div class="odoo-process">
+
+    <div class="odoo-step">
+
+      <div class="odoo-step-number">
+        01
+      </div>
+
+      <h3>
+        Discover
+      </h3>
+
+      <p>
+        Understand your business and requirements.
+      </p>
+
+    </div>
+
+
+    <div class="odoo-step">
+
+      <div class="odoo-step-number">
+        02
+      </div>
+
+      <h3>
+        Plan
+      </h3>
+
+      <p>
+        Select applications and design workflows.
+      </p>
+
+    </div>
+
+
+    <div class="odoo-step">
+
+      <div class="odoo-step-number">
+        03
+      </div>
+
+      <h3>
+        Implement
+      </h3>
+
+      <p>
+        Configure and deploy your Odoo environment.
+      </p>
+
+    </div>
+
+
+    <div class="odoo-step">
+
+      <div class="odoo-step-number">
+        04
+      </div>
+
+      <h3>
+        Train
+      </h3>
+
+      <p>
+        Train users and prepare your team for launch.
+      </p>
+
+    </div>
+
+
+    <div class="odoo-step">
+
+      <div class="odoo-step-number">
+        05
+      </div>
+
+      <h3>
+        Support
+      </h3>
+
+      <p>
+        Continue improving your system as your business grows.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- INDUSTRIES -->
+
+<section>
+
+  <h2>
+    Industries We Can Support
+  </h2>
+
+  <p class="small">
+    Odoo can be configured for a wide range of business models.
+  </p>
+
+
+  <div class="odoo-industries">
+
+    <div class="odoo-industry">
+      Retail
+    </div>
+
+    <div class="odoo-industry">
+      Wholesale & Distribution
+    </div>
+
+    <div class="odoo-industry">
+      Manufacturing
+    </div>
+
+    <div class="odoo-industry">
+      IT & Technology
+    </div>
+
+    <div class="odoo-industry">
+      Professional Services
+    </div>
+
+    <div class="odoo-industry">
+      Trading
+    </div>
+
+    <div class="odoo-industry">
+      eCommerce
+    </div>
+
+    <div class="odoo-industry">
+      Restaurants & Hospitality
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WHY MICROSERVE -->
+
+<section>
+
+  <div class="card">
+
+    <h2>
+      Why Microserve?
+    </h2>
+
+    <p class="small"
+       style="margin-top:12px;">
+
+      Microserve combines ERP, cloud, infrastructure and
+      digital technology experience to help businesses
+      modernize their operations.
+
+    </p>
+
+
+    <div class="grid"
+         style="grid-template-columns:repeat(2,1fr);gap:15px;margin-top:20px;">
+
+      <div>
+
+        <strong>
+          ✓ Odoo Learning Partner
+        </strong>
+
+        <div class="small">
+          Access to Odoo's partner learning ecosystem.
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <strong>
+          ✓ Technology Expertise
+        </strong>
+
+        <div class="small">
+          Cloud, infrastructure and business technology experience.
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <strong>
+          ✓ Business-first Approach
+        </strong>
+
+        <div class="small">
+          Focus on business processes and practical solutions.
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <strong>
+          ✓ Long-term Support
+        </strong>
+
+        <div class="small">
+          Training, technical support and continuous improvement.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section id="contact">
+
+  <div class="odoo-cta">
+
+    <h2>
+      Ready to simplify your business?
+    </h2>
+
+    <p>
+      Talk to Microserve about your Odoo requirements.
+    </p>
+
+
+    <a
+      class="btn"
+      href="tel:+919987620148">
+      📞 Call +91-9987620148
+    </a>
+
+
+    <a
+      class="btn alt"
+      href="https://wa.me/919987620148">
+      WhatsApp Us
+    </a>
+
+
+    <a
+      class="btn alt"
+      href="mailto:support@microserve.in">
+      ✉️ Email Us
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section>
+
+  <h2>
+    Frequently Asked Questions
+  </h2>
+
+
+  <div class="odoo-faq">
+
+
+    <details>
+
+      <summary>
+        What is Odoo?
+      </summary>
+
+      <p>
+        Odoo is an integrated business software platform
+        covering CRM, sales, accounting, inventory, purchasing,
+        POS, website, eCommerce and many other applications.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        Is Microserve an Odoo Partner?
+      </summary>
+
+      <p>
+        Yes. Microserve is an Odoo Learning Partner.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        Can Microserve implement Odoo for my business?
+      </summary>
+
+      <p>
+        Yes. We can assist with requirements analysis,
+        configuration, implementation, data migration,
+        training and technical support.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        Can Odoo integrate with existing software?
+      </summary>
+
+      <p>
+        Odoo can be integrated with external systems depending
+        on your requirements and available integration methods.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        How much does Odoo implementation cost?
+      </summary>
+
+      <p>
+        Pricing depends on the number of users, applications,
+        business complexity, customization and integration
+        requirements. Contact Microserve for a project assessment.
+      </p>
+
+    </details>
+
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+  <div class="container wrap">
+
+    <div>
+
+      <strong>
+        Microserve
+      </strong>
+
+      <div class="small">
+        Odoo ERP · Cloud · IT Solutions · Digital Transformation
+      </div>
+
+      <div class="small">
+        Phone:
+        <a href="tel:+919987620148">
+          +91-9987620148
+        </a>
+        ·
+        <a href="mailto:support@microserve.in">
+          support@microserve.in
+        </a>
+      </div>
+
+    </div>
+
+
+    <div class="small">
+
+      © <span id="year"></span>
+      Microserve. All rights reserved.
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+document.getElementById("year").innerText =
+  new Date().getFullYear();
+
+</script>
+
+
+<!-- ODOO ORGANIZATION / LOCAL BUSINESS SCHEMA -->
+
+<script type="application/ld+json">
+
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"Microserve",
+  "image":"https://microserve.in/assets/logo.png",
+  "telephone":"+91-9987620148",
+  "email":"support@microserve.in",
+  "url":"https://microserve.in/odoo/",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Mumbai",
+    "addressRegion":"Maharashtra",
+    "addressCountry":"IN"
+  },
+  "areaServed":[
+    "Mumbai",
+    "Maharashtra",
+    "India"
+  ],
+  "serviceType":[
+    "Odoo ERP Implementation",
+    "Odoo Consulting",
+    "Odoo CRM",
+    "Odoo Accounting",
+    "Odoo Inventory",
+    "Odoo POS",
+    "Odoo eCommerce",
+    "Odoo Training",
+    "Odoo Technical Support"
+  ]
+}
+
+</script>
+
+
+</body>
+</html>
